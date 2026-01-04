@@ -4,8 +4,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
     selector: 'app-ueber-mich',
     templateUrl: './ueber-mich.component.html',
     styleUrl: './ueber-mich.component.scss',
-    encapsulation: ViewEncapsulation.None,
-    standalone: false
+    encapsulation: ViewEncapsulation.None
 })
 export class UeberMichComponent {
 
