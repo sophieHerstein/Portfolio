@@ -1,5 +1,7 @@
 export enum EAppPaths {
-  UEBER_MICH = 'ueber-mich',
-  PROJEKTE = 'projekte',
-  ROOT = ''
+    EXPERIENCE = 'erfahrung',
+    CONTACT = 'kontakt',
+    UEBER_MICH = 'ueber-mich',
+    PROJEKTE = 'projekte',
+    ROOT = ''
 }

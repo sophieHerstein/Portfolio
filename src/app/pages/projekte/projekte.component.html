@@ -1,1 +1,19 @@
-<p>projekte works!</p>
+<div class="container">
+    <h1>Meine Projekte</h1>
+    <!--    TODO: responsive anordnen-->
+    @for (project of projeke; track project) {
+        <div class="card">
+            <h2>{{ project.name }}</h2>
+            <p>Problem: {{ project.problem }}</p>
+            <p>Lösung: {{ project.loesung }}</p>
+            <p>Techstack: {{ project.techstack }}</p>
+            @if (project.github) {
+                <p>Github: {{ project.github }}</p>
+            }
+            @if (project.demo) {
+                <p>Demo: {{ project.demo }}</p>
+            }
+        </div>
+    }
+
+</div>
