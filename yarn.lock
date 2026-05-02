@@ -1767,6 +1767,20 @@
     "@emnapi/runtime" "^1.4.3"
     "@tybys/wasm-util" "^0.10.0"
 
+"@ng-icons/bootstrap-icons@^33.2.2":
+  version "33.2.2"
+  resolved "https://registry.yarnpkg.com/@ng-icons/bootstrap-icons/-/bootstrap-icons-33.2.2.tgz#977fdacfaf058b9118b3e8af6bb96e11b2551b57"
+  integrity sha512-YbaGBuay5egHf7btD34aqLxSGZlvOPaMzqxSExYXc30j682PVJTT+JgZhhhouMNO18jjFLx4M+75VrWcwE/b+A==
+  dependencies:
+    tslib "^2.3.0"
+
+"@ng-icons/core@^33.2.2":
+  version "33.2.2"
+  resolved "https://registry.yarnpkg.com/@ng-icons/core/-/core-33.2.2.tgz#6933bfde3b55bdeed2242bc0c1b6df730c5142b9"
+  integrity sha512-MwxREFbCx5p+x+Lx26V1FkHFpqHR/6g1TmBG7aYx+FFe1DIfrxUVXM+LW/Mviv3dN5sLE/Fi0ULP79Gz9uG0SQ==
+  dependencies:
+    tslib "^2.3.0"
+
 "@npmcli/agent@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@npmcli/agent/-/agent-3.0.0.tgz#1685b1fbd4a1b7bb4f930cbb68ce801edfe7aa44"

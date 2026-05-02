@@ -1,8 +1,11 @@
 <div class="background">
-    <div class="container">
-        <h1 class="text-white">Hi, ich bin Sophie</h1>
-        <h2 class="text-white">Softwareentwicklerin</h2>
-        <p class="text-white">Ich entwickel Angular-Anwendungen</p>
-        <a [routerLink]="EAppPaths.PROJEKTE">-> Zu meinen Projekten</a>
+    <div class="container d-flex flex-column justify-content-center align-items-start">
+        <h1>Hi, ich bin Sophie</h1>
+        <h2>Software-Entwicklerin</h2>
+        <p>Ich entwickel Angular-Anwendungen</p>
+        <a class="d-flex align-items-center link-to-projekte gap-3 justify-content-between" [routerLink]="EAppPaths.PROJEKTE">
+            <ng-icon name="bootstrapArrowRight" size="2rem"></ng-icon>
+            <span>Zu meinen Projekten</span>
+        </a>
     </div>
 </div>

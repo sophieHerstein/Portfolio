@@ -1,1 +1,36 @@
 @use "bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('assets/Ubuntu_Mono/UbuntuMono-Regular.ttf');
+}
+
+html, body {
+  font-family: 'Ubuntu Mono', monospace;
+  background-color: #3c0505;
+}
+
+h1, h2, h3, h4, h5, h6, span, p {
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: #CCCCCC;
+    > span {
+      color: #CCCCCC;
+    }
+    > ng-icon {
+      padding-left: 5px;
+    }
+  }
+
+  &:focus {
+    border: 1px solid #CCCCCC;
+  }
+}

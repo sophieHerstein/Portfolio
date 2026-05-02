@@ -3,23 +3,41 @@ app-home {
     position: fixed;
     width: 100vw;
     height: 100vh;
-  }
-
-  .background {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #0b19f3, #19d8c8, #3c0505, #ff3838);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
   }
 
   @keyframes gradient {
     0% {
-      background-position: 0% 50%;
+      background-position: 0 50%;
     }
     50% {
       background-position: 100% 50%;
     }
     100% {
-      background-position: 0% 50%;
+      background-position: 0 50%;
     }
+  }
+
+  .container {
+    margin-top: 100px;
+    margin-left: 300px;
+  }
+
+  .link-to-projekte {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
   }
 }
