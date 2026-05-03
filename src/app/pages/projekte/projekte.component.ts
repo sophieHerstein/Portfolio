@@ -7,43 +7,48 @@ import {Component, ViewEncapsulation} from '@angular/core';
     encapsulation: ViewEncapsulation.None,
 })
 export class ProjekteComponent {
+    //TODO: demos ergänzen?
+    //TODO: Fotos ergänzen?
     projeke: IProjekte[] = [{
-        name: "Projekt 1",
-        problem: "Problem",
-        loesung: "Loesung",
-        techstack: ["Angular", "Typescript"],
-        github: "https://github.com/user/repo",
-        demo: "https://demo.com"
+        name: "SportTracker",
+        problem: "Mein Bruder und ich wollten unseren Fortschritt beim Training tracken, aber keine der gängigen Lösungen hat zu uns gepasst.",
+        loesung: "Entwicklung einer eigenen App, die auf unsere Bedürfnisse zugeschnitte ist.",
+        techstack: ["React Native", "Typescript", "Expo"],
+        github: "https://github.com/sophieHerstein/SportTracker",
     },
         {
-            name: "Projekt 2",
-            problem: "Problem 2",
-            loesung: "Loesung 2",
-            techstack: ["Java", "Spring Boot"],
-            github: "https://github.com/user/repo2",
-            demo: "https://demo2.com"
+            name: "DevTracker",
+            problem: "Ich hatte zu viele Projektideen und keine zufriedenstellende Möglichkeit, meine Ideen usw. zu sammeln.",
+            loesung: "DevTracker, bei dem Projekte und deren Fortschritte gesammelt und verfolgt werden können.",
+            techstack: ["Angular", "Typescript"],
+            github: "https://github.com/sophieHerstein/DevTracker"
         },
         {
-            name: "Projekt 3",
-            problem: "Problem 3",
-            loesung: "Loesung 3",
-            techstack: ["Java", "Spring Boot"],
-            demo: "https://demo2.com"
+            name: "Portfolio",
+            problem: "Meine Fähigkeiten in der Softwareentwicklung zeigen.",
+            loesung: "Dieses Portfolio hier",
+            techstack: ["Angular", "Typescript"],
+            github: "https://github.com/sophieHerstein/Portfolio" //TODO: URL überprüfen
         },
         {
-            name: "Projekt 4",
-            problem: "Problem 4",
-            loesung: "Loesung 4",
-            techstack: ["Java", "Spring Boot"],
-            github: "https://github.com/user/repo2",
+            name: "Smart Graphics ESA",
+            problem: "Aufgabe war eine kreative Umsetzung in der GenAI verwendet wird.",
+            loesung: "Eine selbstgeschriebene Kurzgeschichte mit KI-generierten Bildern visuell darstellen.",
+            techstack: ["Angular", "Typescript"],
+            github: "https://github.com/sophieHerstein/SmartGraphicsESA",
         },
         {
-            name: "Projekt 5",
-            problem: "Problem 5",
-            loesung: "Loesung 5",
-            techstack: ["Java", "Spring Boot"],
-        },
+            name: "Masterarbeit",
+            problem: "Die Erkennung von Deepfakes wird immer schwieriger, etablierte Detektoren können nicht mit der Entwicklung der generierenden Modelle mithalten.",
+            loesung: "Ein Zusammenschluss mehrerer etablierter Detektoren inkl. deren Spezialisierung auf Inhalte.",
+            techstack: ["Python"],
+            github: "https://github.com/sophieHerstein/Masterarbeit_DeepfakeDetectionEnsemble",
+        }
     ]
+
+    cleanedURL(url: string): string {
+        return url.replace("https://", "").replace("http://", "").replace("www.", "");
+    }
 }
 
 export interface IProjekte {

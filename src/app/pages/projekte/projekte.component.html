@@ -1,19 +1,38 @@
 <div class="container">
     <h1>Meine Projekte</h1>
-    <!--    TODO: responsive anordnen-->
+    <div class="projects">
     @for (project of projeke; track project) {
-        <div class="card">
-            <h2>{{ project.name }}</h2>
-            <p>Problem: {{ project.problem }}</p>
-            <p>Lösung: {{ project.loesung }}</p>
-            <p>Techstack: {{ project.techstack }}</p>
+        <div class="card p-3">
+            <h2 class="text-black">{{ project.name }}</h2>
+            <div>
+                <span class="fw-bold text-black">Problem: </span>
+                <span class="text-black">{{ project.problem }}</span>
+            </div>
+            <div>
+                <span class="fw-bold text-black">Lösung: </span>
+                <span class="text-black">{{ project.loesung }}</span>
+            </div>
+            <div>
+                <span class="fw-bold text-black">Techstack: </span>
+                <span class="text-black">{{ project.techstack }}</span>
+            </div>
             @if (project.github) {
-                <p>Github: {{ project.github }}</p>
+                <div>
+                    <span class="fw-bold text-black">Github: </span>
+                    <a class="text-black" [href]="project.github" target="_blank" rel="noopener noreferrer">
+                        {{ cleanedURL(project.github) }}
+                    </a>
+                </div>
             }
             @if (project.demo) {
-                <p>Demo: {{ project.demo }}</p>
+                <div>
+                    <span class="fw-bold text-black">Demo: </span>
+                    <a class="text-black" [href]="project.demo" target="_blank" rel="noopener noreferrer">
+                        {{ cleanedURL(project.demo) }}
+                    </a>
+                </div>
             }
         </div>
     }
-
+    </div>
 </div>
