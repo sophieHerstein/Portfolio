@@ -8,4 +8,11 @@ import {Component, ViewEncapsulation} from '@angular/core';
 })
 export class NotFoundComponent {
 
+    currentUrl = "";
+
+    constructor() {
+        this.currentUrl = window.location.href;
+    }
+
+
 }
