@@ -1,43 +1,64 @@
 app-home {
-  .background {
-    position: fixed;
-    width: 100vw;
+  .hero {
     height: 100vh;
+    display: flex;
+    align-items: center;
+
     background: linear-gradient(-45deg, #0b19f3, #19d8c8, #3c0505, #ff3838);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: gradientMove 12s ease infinite;
+
+    color: var(--color-text);
   }
 
-  @keyframes gradient {
-    0% {
-      background-position: 0 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0 50%;
-    }
-  }
-
-  .container {
-    margin-top: 100px;
-    margin-left: 300px;
-  }
-
-  .link-to-projekte {
-    font-size: 2rem;
+  .hero-content {
+    max-width: 600px;
+    gap: var(--space-md);
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 3rem;
+    font-weight: 700;
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
   }
 
   p {
-    font-size: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .subtext {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    margin-top: var(--space-lg);
+    padding: 12px 22px;
+    border-radius: 999px;
+
+    background: var(--color-accent);
+    color: var(--color-bg);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: all 0.2s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px var(--color-glow);
+  }
+
+  @keyframes gradientMove {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
   }
 }
