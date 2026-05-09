@@ -1,23 +1,34 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a [routerLink]="EAppPaths.ROOT" class="navbar-brand">Sophie Herstein</a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
-                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+<nav class="portfolio-navbar navbar navbar-expand-lg">
+    <div class="container-custom nav-inner">
+        <a [routerLink]="EAppPaths.ROOT" class="navbar-brand">
+            Sophie Herstein
+        </a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav gap-lg-3">
                 <li class="nav-item">
-                    <a [routerLink]="EAppPaths.UEBER_MICH" class="nav-link">Über mich</a>
+                    <a [routerLink]="EAppPaths.UEBER_MICH" routerLinkActive="active-link" class="nav-link">
+                        Über mich
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a [routerLink]="EAppPaths.PROJEKTE" class="nav-link">Projekte</a>
+                    <a [routerLink]="EAppPaths.PROJEKTE" routerLinkActive="active-link" class="nav-link">
+                        Projekte
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a [routerLink]="EAppPaths.EXPERIENCE" class="nav-link">Erfahrung</a>
-                </li>
-                <li class="nav-item">
-                    <a [routerLink]="EAppPaths.CONTACT" class="nav-link">Kontakt</a>
+                    <a [routerLink]="EAppPaths.EXPERIENCE" routerLinkActive="active-link" class="nav-link">
+                        Erfahrung
+                    </a>
                 </li>
             </ul>
         </div>

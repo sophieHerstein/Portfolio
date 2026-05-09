@@ -5,9 +5,14 @@
   src: url('assets/Ubuntu_Mono/UbuntuMono-Regular.ttf');
 }
 
-html, body {
+html,
+body {
   font-family: 'Ubuntu Mono', monospace;
-  background-color: #3c0505;
+  background-color: var(--color-bg);
+}
+
+body {
+  padding-top: 72px;
 }
 
 :root {
@@ -49,7 +54,36 @@ p {
   color: var(--color-text-muted);
 }
 
-.card-custom {
+.about-page,
+.projects-page,
+.experience-page,
+.project-detail-page,
+.not-found-page {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.about-page,
+.project-detail-page {
+  min-height: 100vh;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.tech-stack span {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+}
+
+.card-custom,
+.image-card {
   background: var(--color-card);
   border-radius: 16px;
   padding: var(--space-lg);
@@ -77,6 +111,21 @@ p {
   background: var(--color-accent-hover);
   transform: scale(1.05);
   box-shadow: 0 0 15px var(--color-glow);
+}
+
+.btn-secondary-custom {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-card-border);
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.btn-secondary-custom:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .container-custom {

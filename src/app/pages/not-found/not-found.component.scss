@@ -1,57 +1,53 @@
-.not-found-page {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #3c0505;
-  color: #f8eaea;
-}
+app-not-found {
+  .not-found-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-/* Card im Stil deiner Timeline */
-.not-found-card {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 40px 50px;
-  border-radius: 16px;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  max-width: 500px;
-  width: 90%;
-  transition: all 0.25s ease;
-}
+  .not-found-card {
+    background: var(--color-card);
+    padding: 40px 50px;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--color-card-border);
+    max-width: 500px;
+    width: 90%;
+    transition: all 0.25s ease;
+  }
 
-.not-found-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(212, 163, 115, 0.2);
-}
+  .not-found-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px var(--color-glow);
+  }
 
-/* 404 */
-.error-code {
-  font-size: 5rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
+  .error-code {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
 
-/* Subtle Tech Hint */
-.error-hint {
-  font-size: 0.9rem;
-  opacity: 0.6;
-  font-family: monospace;
-}
+  .error-hint {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    font-family: monospace;
+  }
 
-/* Button */
-.home-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 999px;
-  text-decoration: none;
-  color: #3c0505;
-  background: #d4a373;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
+  .home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--color-bg);
+    background: var(--color-accent);
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
 
-.home-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(212, 163, 115, 0.4);
+  .home-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--color-glow);
+  }
 }

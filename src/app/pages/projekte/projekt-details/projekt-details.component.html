@@ -1,0 +1,104 @@
+<div class="section project-detail-page">
+    <div class="container-custom">
+        <a routerLink="/projekte" class="back-link">
+            ← Zurück zu den Projekten
+        </a>
+        @if (project(); as project) {
+            <section class="project-hero">
+                <div class="project-hero-content">
+                    <h1>{{ project.name }}</h1>
+                    <p class="project-subtitle">
+                        {{ project.shortDescription }}
+                    </p>
+                    <div class="tech-stack">
+                        @for (tech of project.techstack; track tech) {
+                            <span>{{ tech }}</span>
+                        }
+                    </div>
+                    <div class="project-links">
+                        @if (project.github) {
+                            <a
+                                    [href]="project.github"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn-primary-custom">
+                                GitHub
+                            </a>
+                        }
+                        @if (project.demo) {
+                            <a
+                                    [href]="project.demo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn-secondary-custom">
+                                Live Demo
+                            </a>
+                        }
+                    </div>
+                </div>
+                @if (project.images?.length) {
+                    <div class="project-hero-media">
+                        @for (image of project.images; track image.src) {
+                            <figure class="project-hero-media-item image-card">
+                                <img
+                                        [src]="image.src"
+                                        [alt]="image.alt"
+                                        class="project-image">
+                            </figure>
+                        }
+                    </div>
+                }
+            </section>
+            <section class="project-content-grid">
+             <div class="card-custom">
+                    <h2>Problem</h2>
+                    <p>{{ project.problem }}</p>
+                </div>
+             <div class="card-custom">
+                    <h2>Lösung</h2>
+                    <p>{{ project.solution }}</p>
+                </div>
+             <div class="card-custom full-width">
+                    <h2>Technische Umsetzung</h2>
+                    <ul>
+                        @for (detail of project.details; track detail) {
+                            <li>{{ detail }}</li>
+                        }
+                    </ul>
+                </div>
+             @if (project.challenges) {
+                    <div class="card-custom">
+                        <h2>Herausforderungen</h2>
+                        <p>{{ project.challenges }}</p>
+                    </div>
+                }
+             @if (project.learnings) {
+                    <div class="card-custom">
+                        <h2>Learnings</h2>
+                        <p>{{ project.learnings }}</p>
+                    </div>
+                }
+                @if (project.additionalInsights?.length) {
+                    <div class="card-custom full-width">
+                        <h2>Weitere Insights</h2>
+                        <ul>
+                            @for (insight of project.additionalInsights; track insight) {
+                                <li>{{ insight }}</li>
+                            }
+                        </ul>
+                    </div>
+                }
+            </section>
+        } @else {
+            <div class="card-custom not-found-card">
+                <h1>Projekt nicht gefunden</h1>
+                <p>
+                    Das angeforderte Projekt konnte nicht geladen werden.
+                </p>
+                <a routerLink="/projekte" class="btn-primary-custom mt-3">
+                    Zurück zur Übersicht
+                </a>
+            </div>
+        }
+    </div>
+</div>

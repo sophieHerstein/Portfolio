@@ -1,0 +1,145 @@
+app-projekte-details {
+.project-detail-page {
+    .back-link {
+      display: inline-block;
+      margin-bottom: var(--space-xl);
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--color-accent);
+    }
+
+    .project-hero {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-xxl);
+    }
+
+    .project-hero-content {
+      max-width: 750px;
+
+      h1 {
+        margin-bottom: var(--space-md);
+      }
+    }
+
+    .project-subtitle {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-lg);
+    }
+
+    .tech-stack {
+      margin-bottom: var(--space-lg);
+
+      span {
+        padding: 5px 12px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    .project-links {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+
+    .project-hero-media {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: var(--space-lg);
+    }
+
+    .project-hero-media-item {
+      flex: 1 1 0;
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .project-image {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .project-content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .full-width {
+      grid-column: span 2;
+    }
+
+    .card-custom {
+      h2 {
+        margin-bottom: var(--space-md);
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+
+      li {
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 10px;
+        color: var(--color-text-muted);
+        line-height: 1.6;
+      }
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+
+      li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 11px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--color-accent);
+      }
+    }
+
+    .not-found-card {
+      max-width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+  .project-detail-page {
+    .project-hero-media {
+      gap: var(--space-md);
+    }
+
+    .project-content-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .full-width {
+      grid-column: span 1;
+    }
+
+    .project-hero {
+      margin-bottom: var(--space-xl);
+    }
+  }
+}
+}

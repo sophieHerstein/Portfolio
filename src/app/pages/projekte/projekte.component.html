@@ -1,38 +1,33 @@
-<div class="container">
-    <h1>Meine Projekte</h1>
-    <div class="projects">
-    @for (project of projeke; track project) {
-        <div class="card p-3">
-            <h2 class="text-black">{{ project.name }}</h2>
-            <div>
-                <span class="fw-bold text-black">Problem: </span>
-                <span class="text-black">{{ project.problem }}</span>
-            </div>
-            <div>
-                <span class="fw-bold text-black">Lösung: </span>
-                <span class="text-black">{{ project.loesung }}</span>
-            </div>
-            <div>
-                <span class="fw-bold text-black">Techstack: </span>
-                <span class="text-black">{{ project.techstack }}</span>
-            </div>
-            @if (project.github) {
-                <div>
-                    <span class="fw-bold text-black">Github: </span>
-                    <a class="text-black" [href]="project.github" target="_blank" rel="noopener noreferrer">
-                        {{ cleanedURL(project.github) }}
-                    </a>
+<div class="projects-page container-custom section">
+    <h1 class="mb-5">Meine Projekte</h1>
+    <div class="projects-grid">
+        @for (projekt of projekte; track projekt) {
+            <a class="card-custom project-card project-card-link" [routerLink]="['/projekte', projekt.slug]">
+                <h2>{{ projekt.name }}</h2>
+                <p class="project-problem">
+                    <strong>Problem:</strong> {{ projekt.problem }}
+                </p>
+                <p class="project-solution">
+                    <strong>Lösung:</strong> {{ projekt.solution }}
+                </p>
+                <div class="tech-stack">
+                    @for (tech of projekt.techstack; track tech) {
+                        <span>{{ tech }}</span>
+                    }
                 </div>
-            }
-            @if (project.demo) {
-                <div>
-                    <span class="fw-bold text-black">Demo: </span>
-                    <a class="text-black" [href]="project.demo" target="_blank" rel="noopener noreferrer">
-                        {{ cleanedURL(project.demo) }}
-                    </a>
+                <div class="project-links mt-3">
+                    @if (projekt.github) {
+                        <a [href]="projekt.github" target="_blank">
+                            GitHub →
+                        </a>
+                    }
+                    @if (projekt.demo) {
+                        <a [href]="projekt.demo" target="_blank">
+                            Live Demo →
+                        </a>
+                    }
                 </div>
-            }
-        </div>
-    }
+            </a>
+        }
     </div>
 </div>

@@ -4,7 +4,8 @@ import {Component, ViewEncapsulation} from '@angular/core';
     selector: 'app-experience',
     imports: [],
     templateUrl: './experience.component.html',
-    styleUrl: './experience.component.scss'
+    styleUrl: './experience.component.scss',
+    encapsulation: ViewEncapsulation.None
 })
 export class ExperienceComponent {
 

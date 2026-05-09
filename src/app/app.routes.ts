@@ -19,14 +19,14 @@ export const routes: Routes = [
                 .then(m => m.ProjekteComponent)
     },
     {
+        path: `${EAppPaths.PROJEKTE}/:slug`,
+        loadComponent: () =>
+            import('./pages/projekte/projekt-details/projekt-details.component').then(m => m.ProjektDetailsComponent),
+    },
+    {
         path: EAppPaths.EXPERIENCE, loadComponent: () =>
             import('./pages/experience/experience.component')
                 .then(m => m.ExperienceComponent)
-    },
-    {
-        path: EAppPaths.CONTACT, loadComponent: () =>
-            import('./pages/kontakt/kontakt.component')
-                .then(m => m.KontaktComponent)
     },
     {
         path: '**', loadComponent: () =>
