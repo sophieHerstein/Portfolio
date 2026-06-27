@@ -43,6 +43,46 @@ export const PROJEKTE: IProjektDetails[] = [
         ]
     },
     {
+        slug: "web-chat-app",
+        name: "Realtime Web Chat",
+        shortDescription:
+            "Moderne Web-Chat-Anwendung zur Vertiefung von Angular Signals, Spring Boot und WebSockets.",
+        problem:
+            "Ich wollte neue Technologien nicht anhand kleiner Einzelbeispiele lernen, sondern in einem realistischen Projekt einsetzen. Dabei standen Angular Signals, Spring Boot und WebSockets im Mittelpunkt, um das Zusammenspiel zwischen Frontend und Backend besser zu verstehen.",
+        solution:
+            "Entwicklung einer Web-Chat-Anwendung mit Benutzerverwaltung, Kontakten und Echtzeitkommunikation. Das Projekt verbindet ein modernes Angular-Frontend mit einem Spring-Boot-Backend und diente als praktische Lernplattform für aktuelle Webtechnologien.",
+        techstack: [
+            "Angular",
+            "TypeScript",
+            "Spring Boot",
+            "Java",
+            "WebSockets",
+            "Signals",
+            "OpenAPI"
+        ],
+        details: [
+            "Registrierung und Anmeldung von Benutzern",
+            "Suche und Verwaltung persönlicher Kontakte",
+            "Versenden und Empfangen von Nachrichten in Echtzeit über WebSockets",
+            "Modernes State-Management mit Angular Signals",
+            "Verwendung von Route Guards zur Zugriffskontrolle",
+            "Trennung von UI und Geschäftslogik durch Services und Wrapper-Klassen",
+            "Automatische Generierung von Datenmodellen und API-Services über OpenAPI",
+            "Kommunikation zwischen Angular-Frontend und Spring-Boot-Backend"
+        ],
+        challenges:
+            "Die größte Herausforderung war die Anbindung des Angular-Frontends an das Spring-Boot-Backend. Besonders das Zusammenspiel von Authentifizierung, REST-Schnittstellen, WebSockets und dem Frontend-State erforderte mehrere Überarbeitungen, bis alle Komponenten zuverlässig zusammenarbeiteten.",
+        learnings:
+            "Durch das Projekt habe ich den praktischen Einsatz von Angular Signals, WebSockets und Spring Boot kennengelernt. Außerdem wurde mein Verständnis für Frontend-Architektur, API-Integration und die Strukturierung größerer Anwendungen deutlich vertieft.",
+        additionalInsights: [
+            "Projekt entstand mit dem Ziel, mehrere neue Technologien in einem praxisnahen Szenario zu erlernen",
+            "Angular-Frontend inklusive UI, Architektur und Datenmodell wurde eigenständig entwickelt",
+            "OpenAPI wird genutzt, um Datenmodelle und API-Services zwischen Backend und Frontend konsistent zu halten",
+            "Geplante Erweiterungen umfassen Gruppenchats sowie das Versenden von Bildern und Videos"
+        ],
+        github: "https://github.com/sophieHerstein/ChatApp"
+    },
+    {
         slug: "portfolio",
         name: "Developer Portfolio",
         shortDescription:
